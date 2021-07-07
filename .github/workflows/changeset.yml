@@ -1,0 +1,19 @@
+name: changesets
+on:
+  push:
+    branches: -master
+jobs:
+  changeset:
+    if: github.repository == 'jnm2377/changeset-demo'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js 14.x
+        uses: actions/setup-node@master
+        with:
+          node-version: 14.x
+      - name: Install dependencies
+        run: yarn install --immutable --immutable-cache
