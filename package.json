@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "repository": "git@github.com:jnm2377/changeset-demo.git",
   "workspaces": [
     "packages/*"
   ],
